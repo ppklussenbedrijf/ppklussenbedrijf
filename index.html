@@ -260,7 +260,7 @@
             margin-bottom: 15px;
         }
 
-        /* Onze Diensten – nog 30% kleiner + geen foto's */
+        /* Onze Diensten – kleiner, zonder foto's */
         #services {
             padding-top: 14px !important;
             padding-bottom: 14px !important;
@@ -361,49 +361,49 @@
             font-size: 0.95em;
         }
 
-        /* Handige Tools – 40% kleiner */
+        /* Handige Tools – 50% kleiner en 4 naast elkaar */
         #tools {
-            padding-top: 14px !important;
-            padding-bottom: 14px !important;
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
         }
 
         #tools h2 {
-            margin-bottom: 12px;
-            font-size: 1.5em;
+            margin-bottom: 8px;
+            font-size: 1.4em;
         }
 
         .tools-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-            gap: 14px;
-            margin-top: 12px;
-            max-width: 720px;
+            grid-template-columns: repeat(4, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 8px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .tool-card {
             background: white;
-            padding: 14px;
-            border-radius: 15px;
+            padding: 10px;
+            border-radius: 12px;
             box-shadow: 0 3px 10px rgba(0,0,0,0.08);
             text-align: center;
             cursor: pointer;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .tool-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
         }
 
         .tool-icon {
-            font-size: 1.9em;
-            margin-bottom: 8px;
+            font-size: 1.7em;
+            margin-bottom: 6px;
         }
 
         .tool-card h3 {
-            font-size: 0.95em;
+            font-size: 0.85em;
         }
 
         /* Contact Section */
@@ -485,8 +485,8 @@
         .contact-card .whatsapp-btn {
             display: block;
             margin: 12px auto 0;
-            padding: 7px 16px;   /* kleiner */
-            font-size: 0.9em;    /* tekst ook kleiner */
+            padding: 7px 16px;
+            font-size: 0.9em;
         }
 
         /* Modals (Tools) */
@@ -649,9 +649,13 @@
 
             .services-grid,
             .reviews-grid,
-            .tools-grid,
             .contact-info {
                 grid-template-columns: 1fr;
+            }
+
+            /* op mobiel 2 naast elkaar is praktischer */
+            .tools-grid {
+                grid-template-columns: repeat(2, minmax(140px, 1fr));
             }
         }
     </style>
@@ -729,12 +733,11 @@
         </div>
     </section>
 
-    <!-- Onze Diensten (kleiner, zonder foto's) -->
+    <!-- Onze Diensten -->
     <section id="services">
         <div class="container">
             <h2 data-nl="Onze Diensten" data-en="Our Services" data-pl="Nasze Usługi"></h2>
             <div class="services-grid">
-                <!-- Timmerwerk -->
                 <div class="service-card">
                     <div class="service-icon">🪚</div>
                     <h3 data-nl="Timmerwerk" data-en="Carpentry" data-pl="Stolarka"></h3>
@@ -743,7 +746,6 @@
                     <p class="lang-content pl">Profesjonalna stolarka do wszystkich Twoich projektów. Od szafek na wymiar po kompletne rozwiązania wnętrzarskie.</p>
                 </div>
 
-                <!-- Houtconstructie -->
                 <div class="service-card">
                     <div class="service-icon">🏗️</div>
                     <h3 data-nl="Houtconstructie" data-en="Wood Construction" data-pl="Konstrukcje Drewniane"></h3>
@@ -752,7 +754,6 @@
                     <p class="lang-content pl">Mocne i trwałe konstrukcje drewniane do każdego projektu budowlanego. Gwarantowana jakość i rzemiosło.</p>
                 </div>
 
-                <!-- Plafonds -->
                 <div class="service-card">
                     <div class="service-icon">🏠</div>
                     <h3 data-nl="Plafonds" data-en="Ceilings" data-pl="Sufity"></h3>
@@ -761,7 +762,6 @@
                     <p class="lang-content pl">Doskonałe wykończenie sufitu dla eleganckiego wyglądu. Fachowa instalacja wszystkich rodzajów sufitów.</p>
                 </div>
 
-                <!-- Metaal stud -->
                 <div class="service-card">
                     <div class="service-icon">🔩</div>
                     <h3 data-nl="Metaal Stud" data-en="Metal Stud" data-pl="Profile Metalowe"></h3>
@@ -770,7 +770,6 @@
                     <p class="lang-content pl">Nowoczesne systemy profili metalowych do ścian i sufitów. Szybkie, wydajne i niezawodne.</p>
                 </div>
 
-                <!-- Tuinrenovatie -->
                 <div class="service-card">
                     <div class="service-icon">🌳</div>
                     <h3 data-nl="Tuinrenovatie" data-en="Garden Renovation" data-pl="Renowacja Ogrodu"></h3>
@@ -787,7 +786,6 @@
         <div class="container">
             <h2 data-nl="Wat Onze Klanten Zeggen" data-en="What Our Customers Say" data-pl="Co Mówią Nasi Klienci"></h2>
             <div class="reviews-grid">
-                <!-- 5 sterren -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">JD</div>
@@ -801,7 +799,6 @@
                     <p class="review-text lang-content pl">"Doskonała praca! PPKLUSSENBEDRIJF całkowicie odnowił mój ogród. Profesjonalnie, niezawodnie i piękny efekt końcowy. Gorąco polecam!"</p>
                 </div>
 
-                <!-- 5 sterren -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">MK</div>
@@ -815,7 +812,6 @@
                     <p class="review-text lang-content pl">"Bardzo zadowolona z prac stolarskich w moim domu. Patryk pracuje dokładnie i pomaga znaleźć najlepsze rozwiązania. Świetna obsługa!"</p>
                 </div>
 
-                <!-- 4 sterren -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">PB</div>
@@ -829,7 +825,6 @@
                     <p class="review-text lang-content pl">"Nowe ściany z profili metalowych w naszym biurze. Wszystko zgodnie z ustaleniami i na czas. Jesteśmy bardzo zadowoleni."</p>
                 </div>
 
-                <!-- 4 sterren -->
                 <div class="review-card">
                     <div class="review-header">
                         <div class="review-avatar">LV</div>
