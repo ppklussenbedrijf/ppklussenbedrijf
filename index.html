@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PP KLUSSENBEDRIJF, Timmerwerk, Houtconstructie, Plafonds, Metaal stud en Tuinrenovatie</title>
+    <meta name="description" content="Ontdek PP KLUSSENBEDRIJF, uw vertrouwde partner voor uw klussen, professioneel en betrouwbaar. Bel gerust voor een afspraak of stuur ons een email!">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔨</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #dc2626;
+            --primary-blue: #2563eb;
+            --light-blue: #dbeafe;
+            --light-red: #fee2e2;
+            --dark-gray: #1f2937;
+            --light-gray: #f3f4f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: white;
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--dark-gray);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: var(--primary-red);
+        }
+
+        .language-switcher {
+            display: flex;
+            gap: 10px;
+            border-left: 2px solid var(--light-gray);
+            padding-left: 20px;
+        }
+
+        .language-switcher button {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.5em;
+            transition: background 0.3s;
+            min-width: 50px;
+            line-height: 1;
+        }
+
+        .language-switcher button.active {
+            background: var(--primary-red);
+        }
+
+        .language-switcher button:hover {
+            background: var(--primary-red);
+        }
+
+        .language-switcher button[data-lang="nl"] {
+            background: var(--primary-red);
+        }
+
+        .language-switcher button[data-lang="nl"].active {
+            background: var(--primary-red);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(to right, #dc2626 0%, #ffffff 100%) !important;
+            color: var(--dark-gray);
+            padding: 50px 20px;
+        }
+
+        .hero-inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .hero-text {
+            flex: 1 1 280px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff !important;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--primary-blue);
+        }
+
+        .btn-secondary {
+            background: var(--primary-red);
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* QR-blok in hero */
+        .hero-qr {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+
+        .hero-qr img {
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+            background: white;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+
+        .hero-qr p {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #111827;
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+        }
+
+        section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+        #services, #reviews, #tools, #contact {
+            padding: 30px 20px !important;
+        }
+
+        #reviews {
+            background: linear-gradient(to right, #dc2626 0%, #ffffff 100%) !important;
+        }
+
+        #contact {
+            background: linear-gradient(to right, #dc2626 0%, #ffffff 100%) !important;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        #services h2, #reviews h2, #tools h2, #contact h2 {
+            margin-bottom: 20px;
+        }
+
+        #reviews h2, #contact h2 {
+            color: white !important;
+        }
+
+        h3 {
+            color: var(--primary-red);
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        /* Onze Diensten – kleiner, zonder foto's */
+        #services {
+            padding-top: 14px !important;
+            padding-bottom: 14px !important;
+        }
+
+        #services h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 14px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .service-icon {
+            font-size: 2.1em;
+            margin-bottom: 8px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 6px;
+            font-size: 1.05em;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.9em;
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--light-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3em;
+            color: var(--primary-blue);
+            font-weight: bold;
+        }
+
+        .review-info h4 {
+            color: var(--primary-blue);
+            margin-bottom: 3px;
+            font-size: 1.05em;
+        }
+
+        .stars {
+            color: #fbbf24;
+            font-size: 1.1em;
+        }
+
+        .review-text {
+            color: #666;
+            font-style: italic;
+            line-height: 1.7;
+            font-size: 0.95em;
+        }
+
+        /* Handige Tools – 50% kleiner en 4 naast elkaar */
+        #tools {
+            padding-top: 10px !important;
+            padding-bottom: 10px !important;
+        }
+
+        #tools h2 {
+            margin-bottom: 8px;
+            font-size: 1.4em;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 8px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tool-card {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+        }
+
+        .tool-icon {
+            font-size: 1.7em;
+            margin-bottom: 6px;
+        }
+
+        .tool-card h3 {
+            font-size: 0.85em;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 25px;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-card h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card p {
+            margin-bottom: 10px;
+            color: #666;
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .contact-card p.full-width {
+            display: block;
+            margin-right: 0;
+        }
+
+        .contact-card a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-card a:hover {
+            color: var(--primary-red);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: var(--primary-blue);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--primary-red);
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        /* WhatsApp-knop: nog kleiner en netjes in het midden */
+        .contact-card .whatsapp-btn {
+            display: block;
+            margin: 20px auto 0;
+            padding: 6px 14px;
+            font-size: 0.75em;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        /* Modals (Tools) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            overflow: auto;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 40px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 20px;
+        }
+
+        .close:hover {
+            color: var(--primary-red);
+        }
+
+        .modal h3 {
+            margin-bottom: 10px;
+            text-align: left;
+            color: var(--primary-blue);
+        }
+
+        .modal-subtitle {
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--dark-gray);
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid var(--light-gray);
+            border-radius: 6px;
+            font-size: 0.95em;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+        }
+
+        .arrow-indicator {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 5px 0 10px;
+            color: #555;
+        }
+
+        .calculate-btn {
+            width: 100%;
+            padding: 14px;
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .calculate-btn:hover {
+            background: var(--primary-red);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-gray);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        /* Taalcontent */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+
+            nav {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 15px;
+                padding-top: 20px;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .language-switcher {
+                border-left: none;
+                padding-left: 0;
+                padding-top: 10px;
+            }
+
+            .hero-inner {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h2 {
+                font-size: 1.8em;
+            }
+
+            .services-grid,
+            .reviews-grid,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .tools-grid {
+                grid-template-columns: repeat(2, minmax(140px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="https://raw.githubusercontent.com/ppklussenbedrijf/ppklussenbedrijf/main/bedrijfslogo_250px.png" alt="PP KLUSSENBEDRIJF Logo" class="logo">
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            
+            <nav id="mainNav">
+                <a href="#home" data-nl="Home" data-en="Home" data-pl="Strona główna"></a>
+                <a href="#about" data-nl="Over Ons" data-en="About Us" data-pl="O nas"></a>
+                <a href="#services" data-nl="Diensten" data-en="Services" data-pl="Usługi"></a>
+                <a href="#reviews" data-nl="Ervaringen" data-en="Reviews" data-pl="Opinie"></a>
+                <a href="#tools" data-nl="Tools" data-en="Tools" data-pl="Narzędzia"></a>
+                <a href="#contact" data-nl="Contact" data-en="Contact" data-pl="Kontakt"></a>
+                
+                <div class="language-switcher">
+                    <button onclick="changeLanguage('nl')" class="lang-btn active" data-lang="nl" title="Nederlands">🇳🇱</button>
+                    <button onclick="changeLanguage('en')" class="lang-btn" data-lang="en" title="English">🇺🇸</button>
+                    <button onclick="changeLanguage('pl')" class="lang-btn" data-lang="pl" title="Polski">🇵🇱</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section met QR -->
+    <section id="home" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h2 class="hero-title" data-nl="Uw Partner voor Professionele Klussen" data-en="Your Partner for Professional Jobs" data-pl="Twój Partner w Profesjonalnych Pracach"></h2>
+                <p class="hero-subtitle" data-nl="Specialist in Timmerwerk, Houtconstructie, Plafonds, Metaal stud en Tuinrenovatie" data-en="Specialist in Carpentry, Wood Construction, Ceilings, Metal Stud and Garden Renovation" data-pl="Specjalista w Stolarce, Konstrukcjach Drewnianych, Sufitach, Profilach Metalowych i Renowacji Ogrodu"></p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary" data-nl="Neem Contact Op" data-en="Get in Touch" data-pl="Skontaktuj się"></a>
+                    <a href="tel:+31687989244" class="btn btn-secondary" data-nl="Bel Nu" data-en="Call Now" data-pl="Zadzwoń teraz"></a>
+                </div>
+            </div>
+
+            <div class="hero-qr">
+                <img src="https://raw.githubusercontent.com/ppklussenbedrijf/ppklussenbedrijf/main/qr-code.png" alt="QR-code contact PP KLUSSENBEDRIJF">
+                <p data-nl="Scan de QR-code om onze contactgegevens op te slaan."
+                   data-en="Scan the QR code to save our contact details."
+                   data-pl="Zeskanuj kod QR, aby zapisać nasze dane kontaktowe."></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Over ons -->
+    <section id="about">
+        <div class="container">
+            <h2 data-nl="Over Ons" data-en="About Us" data-pl="O Nas"></h2>
+            <p class="lang-content nl active">
+                PPKLUSSENBEDRIJF is uw betrouwbare partner voor alle kluswerk in Rijswijk en omgeving. 
+                Met jarenlange ervaring in timmerwerk, houtconstructie, plafonds, metaal stud en tuinrenovatie 
+                leveren wij hoogwaardige diensten tegen eerlijke prijzen. Onze missie is eenvoudig: kwaliteit, 
+                betrouwbaarheid en klanttevredenheid staan altijd voorop.
+            </p>
+            <p class="lang-content en">
+                PPKLUSSENBEDRIJF is your reliable partner for all construction and renovation work in Rijswijk 
+                and the surrounding area. With years of experience in carpentry, wood construction, ceilings, 
+                metal stud and garden renovation, we deliver high-quality services at fair prices. Our mission 
+                is simple: quality, reliability and customer satisfaction always come first.
+            </p>
+            <p class="lang-content pl">
+                PPKLUSSENBEDRIJF to Twój niezawodny partner we wszystkich pracach remontowo-budowlanych w Rijswijk 
+                i okolicach. Dzięki wieloletniemu doświadczeniu w stolarce, konstrukcjach drewnianych, sufitach, 
+                profilach metalowych i renowacji ogrodu, oferujemy usługi wysokiej jakości w uczciwych cenach. 
+                Nasza misja jest prosta: jakość, niezawodność i zadowolenie klienta zawsze na pierwszym miejscu.
+            </p>
+        </div>
+    </section>
+
+    <!-- Onze Diensten -->
+    <section id="services">
+        <div class="container">
+            <h2 data-nl="Onze Diensten" data-en="Our Services" data-pl="Nasze Usługi"></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🪚</div>
+                    <h3 data-nl="Timmerwerk" data-en="Carpentry" data-pl="Stolarka"></h3>
+                    <p class="lang-content nl active">Professioneel timmerwerk voor al uw projecten. Van maatwerk kasten tot complete interieuroplossingen.</p>
+                    <p class="lang-content en">Professional carpentry for all your projects. From custom cabinets to complete interior solutions.</p>
+                    <p class="lang-content pl">Profesjonalna stolarka do wszystkich Twoich projektów. Od szafek na wymiar po kompletne rozwiązania wnętrzarskie.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3 data-nl="Houtconstructie" data-en="Wood Construction" data-pl="Konstrukcje Drewniane"></h3>
+                    <p class="lang-content nl active">Sterke en duurzame houtconstructies voor elk bouwproject. Kwaliteit en vakmanschap gegarandeerd.</p>
+                    <p class="lang-content en">Strong and durable wooden constructions for any building project. Quality and craftsmanship guaranteed.</p>
+                    <p class="lang-content pl">Mocne i trwałe konstrukcje drewniane do każdego projektu budowlanego. Gwarantowana jakość i rzemiosło.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🏠</div>
+                    <h3 data-nl="Plafonds" data-en="Ceilings" data-pl="Sufity"></h3>
+                    <p class="lang-content nl active">Perfecte plafondafwerking voor een strakke uitstraling. Vakkundige installatie van alle soorten plafonds.</p>
+                    <p class="lang-content en">Perfect ceiling finishing for a sleek appearance. Expert installation of all types of ceilings.</p>
+                    <p class="lang-content pl">Doskonałe wykończenie sufitu dla eleganckiego wyglądu. Fachowa instalacja wszystkich rodzajów sufitów.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🔩</div>
+                    <h3 data-nl="Metaal Stud" data-en="Metal Stud" data-pl="Profile Metalowe"></h3>
+                    <p class="lang-content nl active">Moderne metaal stud systemen voor wanden en plafonds. Snel, efficiënt en betrouwbaar.</p>
+                    <p class="lang-content en">Modern metal stud systems for walls and ceilings. Fast, efficient, and reliable.</p>
+                    <p class="lang-content pl">Nowoczesne systemy profili metalowych do ścian i sufitów. Szybkie, wydajne i niezawodne.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🌳</div>
+                    <h3 data-nl="Tuinrenovatie" data-en="Garden Renovation" data-pl="Renowacja Ogrodu"></h3>
+                    <p class="lang-content nl active">Transformeer uw tuin tot een prachtige buitenruimte. Van schuttingen tot complete tuinrenovaties.</p>
+                    <p class="lang-content en">Transform your garden into a beautiful outdoor space. From fences to complete garden renovations.</p>
+                    <p class="lang-content pl">Przekształć swój ogród w piękną przestrzeń zewnętrzną. Od ogrodzeń po kompletne renowacje ogrodów.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wat Onze Klanten Zeggen -->
+    <section id="reviews">
+        <div class="container">
+            <h2 data-nl="Wat Onze Klanten Zeggen" data-en="What Our Customers Say" data-pl="Co Mówią Nasi Klienci"></h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">JD</div>
+                        <div class="review-info">
+                            <h4>Jan de Vries</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text lang-content nl active">"Uitstekend werk! PPKLUSSENBEDRIJF heeft mijn tuin volledig gerenoveerd. Professioneel, betrouwbaar en een prachtig eindresultaat. Aanrader!"</p>
+                    <p class="review-text lang-content en">"Excellent work! PPKLUSSENBEDRIJF completely renovated my garden. Professional, reliable, and a beautiful end result. Highly recommended!"</p>
+                    <p class="review-text lang-content pl">"Doskonała praca! PPKLUSSENBEDRIJF całkowicie odnowił mój ogród. Profesjonalnie, niezawodnie i piękny efekt końcowy. Gorąco polecam!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">MK</div>
+                        <div class="review-info">
+                            <h4>Maria Kowalska</h4>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="review-text lang-content nl active">"Zeer tevreden met het timmerwerk in mijn woning. Patryk werkt netjes en denkt mee in oplossingen. Top service!"</p>
+                    <p class="review-text lang-content en">"Very satisfied with the carpentry work in my home. Patryk works neatly and thinks along with solutions. Great service!"</p>
+                    <p class="review-text lang-content pl">"Bardzo zadowolona z prac stolarskich w moim domu. Patryk pracuje dokładnie i pomaga znaleźć najlepsze rozwiązania. Świetna obsługa!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">PB</div>
+                        <div class="review-info">
+                            <h4>Peter Bakker</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review-text lang-content nl active">"Nieuwe metal stud wanden geplaatst op kantoor. Alles volgens afspraak en binnen de planning. Heel blij met het resultaat."</p>
+                    <p class="review-text lang-content en">"New metal stud walls installed in our office. Everything according to plan and on schedule. Very happy with the result."</p>
+                    <p class="review-text lang-content pl">"Nowe ściany z profili metalowych w naszym biurze. Wszystko zgodnie z ustaleniami i na czas. Jesteśmy bardzo zadowoleni."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="review-avatar">LV</div>
+                        <div class="review-info">
+                            <h4>Lisa van Dijk</h4>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="review-text lang-content nl active">"Plafonds en verlichting laten vernieuwen. Erg netjes afgewerkt en goede communicatie tijdens de klus. Zeker een aanrader."</p>
+                    <p class="review-text lang-content en">"Had ceilings and lighting renewed. Very neat finish and good communication during the job. Definitely recommended."</p>
+                    <p class="review-text lang-content pl">"Nowe sufity i oświetlenie. Bardzo staranne wykończenie i dobra komunikacja w trakcie prac. Zdecydowanie polecam."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Handige Tools -->
+    <section id="tools">
+        <div class="container">
+            <h2 data-nl="Handige Tools" data-en="Useful Tools" data-pl="Przydatne Narzędzia"></h2>
+            <div class="tools-grid">
+                <div class="tool-card" onclick="openModal('lengthModal')">
+                    <div class="tool-icon">📏</div>
+                    <h3 data-nl="Lengtematen Omzetten" data-en="Convert Length Units" data-pl="Konwersja Jednostek Długości"></h3>
+                </div>
+
+                <div class="tool-card" onclick="openModal('weightModal')">
+                    <div class="tool-icon">⚖️</div>
+                    <h3 data-nl="Gewicht Berekenen" data-en="Calculate Weight" data-pl="Oblicz Wagę"></h3>
+                </div>
+
+                <div class="tool-card" onclick="openModal('areaModal')">
+                    <div class="tool-icon">📐</div>
+                    <h3 data-nl="Oppervlakte Berekenen" data-en="Calculate Area" data-pl="Oblicz Powierzchnię"></h3>
+                </div>
+
+                <div class="tool-card" onclick="openModal('percentModal')">
+                    <div class="tool-icon">%</div>
+                    <h3 data-nl="Procenten Berekenen" data-en="Calculate Percentages" data-pl="Oblicz Procenty"></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <div class="container">
+            <h2 data-nl="Neem Contact Met Ons Op" data-en="Contact Us" data-pl="Skontaktuj Się Z Nami"></h2>
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h3 data-nl="Adres" data-en="Address" data-pl="Adres"></h3>
+                    <p class="full-width">Patryk Piotrowski</p>
+                    <p class="full-width">Huis te Landelaan 15F-809</p>
+                    <p class="full-width">2283 SC Rijswijk</p>
+                    <p class="full-width">Nederland</p>
+                </div>
+                <div class="contact-card">
+                    <h3 data-nl="Contact" data-en="Contact" data-pl="Kontakt"></h3>
+                    <p><strong data-nl="Telefoonnummer:" data-en="Phone Number:" data-pl="Numer Telefonu:"></strong> <a href="tel:+31687989244">+31 6 87 98 92 44</a></p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/31687989244">+31 6 87 98 92 44</a></p>
+                    <p class="full-width"><strong>E-mail:</strong> <a href="mailto:ppklussenbedrijf@op.pl">ppklussenbedrijf@op.pl</a></p>
+                    <a class="social-btn whatsapp-btn" href="https://wa.me/31687989244" target="_blank">WhatsApp</a>
+                </div>
+                <div class="contact-card">
+                    <h3 data-nl="Bedrijfsgegevens" data-en="Company Details" data-pl="Dane Firmowe"></h3>
+                    <p class="full-width"><strong>KvK:</strong> 7799 8189</p>
+                    <p class="full-width"><strong>BTW:</strong> NL003270413B96</p>
+                    <p class="full-width"><strong>IBAN:</strong> NL31INGB0009428250</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals voor tools -->
+
+    <!-- Lengte conversie -->
+    <div id="lengthModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('lengthModal')">&times;</span>
+            <h3>Lengte Conversie</h3>
+            <p class="modal-subtitle">Converteer tussen verschillende lengte eenheden</p>
+
+            <div class="form-group">
+                <label for="lengthValue">Waarde:</label>
+                <input type="number" id="lengthValue" placeholder="Bijvoorbeeld: 1" step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="lengthFromUnit">Van:</label>
+                <select id="lengthFromUnit">
+                    <option value="mm">millimeter</option>
+                    <option value="cm">centimeter</option>
+                    <option value="m" selected>meter</option>
+                    <option value="km">kilometer</option>
+                </select>
+            </div>
+
+            <div class="arrow-indicator">↓</div>
+
+            <div class="form-group">
+                <label for="lengthResult">Resultaat:</label>
+                <input type="text" id="lengthResult" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="lengthToUnit">Naar:</label>
+                <select id="lengthToUnit">
+                    <option value="mm">millimeter</option>
+                    <option value="cm">centimeter</option>
+                    <option value="m">meter</option>
+                    <option value="km" selected>kilometer</option>
+                </select>
+            </div>
+
+            <button class="calculate-btn" onclick="convertLength()">Converteren</button>
+        </div>
+    </div>
+
+    <!-- Gewicht conversie -->
+    <div id="weightModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('weightModal')">&times;</span>
+            <h3>Gewicht Conversie</h3>
+            <p class="modal-subtitle">Converteer tussen verschillende gewicht eenheden</p>
+
+            <div class="form-group">
+                <label for="weightValue">Waarde:</label>
+                <input type="number" id="weightValue" placeholder="Bijvoorbeeld: 1" step="any">
+            </div>
+
+            <div class="form-group">
+                <label for="weightFromUnit">Van:</label>
+                <select id="weightFromUnit">
+                    <option value="mg">milligram</option>
+                    <option value="g">gram</option>
+                    <option value="kg" selected>kilogram</option>
+                    <option value="t">ton</option>
+                </select>
+            </div>
+
+            <div class="arrow-indicator">↓</div>
+
+            <div class="form-group">
+                <label for="weightResult">Resultaat:</label>
+                <input type="text" id="weightResult" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="weightToUnit">Naar:</label>
+                <select id="weightToUnit">
+                    <option value="mg">milligram</option>
+                    <option value="g" selected>gram</option>
+                    <option value="kg">kilogram</option>
+                    <option value="t">ton</option>
+                </select>
+            </div>
+
+            <button class="calculate-btn" onclick="convertWeight()">Converteren</button>
+        </div>
+    </div>
+
+    <!-- Oppervlakte -->
+    <div id="areaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('areaModal')">&times;</span>
+            <h3 data-nl="Oppervlakte Berekenen" data-en="Calculate Area" data-pl="Oblicz Powierzchnię"></h3>
+            <div class="form-group">
+                <label for="areaLength" data-nl="Lengte (m)" data-en="Length (m)" data-pl="Długość (m)"></label>
+                <input type="number" id="areaLength" placeholder="Bijvoorbeeld: 5" step="any">
+            </div>
+            <div class="form-group">
+                <label for="areaWidth" data-nl="Breedte (m)" data-en="Width (m)" data-pl="Szerokość (m)"></label>
+                <input type="number" id="areaWidth" placeholder="Bijvoorbeeld: 4" step="any">
+            </div>
+            <button class="calculate-btn" onclick="calculateArea()" data-nl="Berekenen" data-en="Calculate" data-pl="Oblicz"></button>
+            <div id="areaResult" class="result" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Procenten -->
+    <div id="percentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('percentModal')">&times;</span>
+            <h3 data-nl="Procenten Berekenen" data-en="Calculate Percentages" data-pl="Oblicz Procenty"></h3>
+            <div class="form-group">
+                <label for="percentBase" data-nl="Basiswaarde" data-en="Base Value" data-pl="Wartość Bazowa"></label>
+                <input type="number" id="percentBase" placeholder="Bijvoorbeeld: 200" step="any">
+            </div>
+            <div class="form-group">
+                <label for="percentValue" data-nl="Procent (%)" data-en="Percent (%)" data-pl="Procent (%)"></label>
+                <input type="number" id="percentValue" placeholder="Bijvoorbeeld: 15" step="any">
+            </div>
+            <button class="calculate-btn" onclick="calculatePercent()" data-nl="Berekenen" data-en="Calculate" data-pl="Oblicz"></button>
+            <div id="percentResult" class="result" style="display:none;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 PPKLUSSENBEDRIJF. Alle rechten voorbehouden.</p>
+        <p data-nl="Gevestigd in Rijswijk | KvK: 7799 8189" data-en="Located in Rijswijk | Chamber of Commerce: 7799 8189" data-pl="Siedziba w Rijswijk | KvK: 7799 8189"></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('active');
+        }
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            });
+
+            document.querySelectorAll('[data-nl]').forEach(el => {
+                const text = el.getAttribute('data-' + lang);
+                if (text !== null) {
+                    el.textContent = text;
+                }
+            });
+
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.lang-content.' + lang).forEach(el => {
+                el.classList.add('active');
+            });
+        }
+
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+
+        /* Lengte conversie: mm, cm, m, km */
+        function convertLength() {
+            const value = parseFloat(document.getElementById('lengthValue').value);
+            const from = document.getElementById('lengthFromUnit').value;
+            const to = document.getElementById('lengthToUnit').value;
+
+            if (isNaN(value)) {
+                alert('Vul een geldige waarde in.');
+                return;
+            }
+
+            const factors = {
+                mm: 0.001,   // meter
+                cm: 0.01,
+                m: 1,
+                km: 1000
+            };
+
+            const inMeters = value * factors[from];
+            const result = inMeters / factors[to];
+
+            document.getElementById('lengthResult').value = result.toFixed(4);
+        }
+
+        /* Gewicht conversie: mg, g, kg, t (via kilogram als basis) */
+        function convertWeight() {
+            const value = parseFloat(document.getElementById('weightValue').value);
+            const from = document.getElementById('weightFromUnit').value;
+            const to = document.getElementById('weightToUnit').value;
+
+            if (isNaN(value)) {
+                alert('Vul een geldige waarde in.');
+                return;
+            }
+
+            const factorsKg = {
+                mg: 0.000001, // kg
+                g: 0.001,
+                kg: 1,
+                t: 1000
+            };
+
+            const inKg = value * factorsKg[from];
+            const result = inKg / factorsKg[to];
+
+            document.getElementById('weightResult').value = result.toFixed(4);
+        }
+
+        function calculateArea() {
+            const length = parseFloat(document.getElementById('areaLength').value);
+            const width = parseFloat(document.getElementById('areaWidth').value);
+            if (isNaN(length) || isNaN(width)) {
+                alert('Vul geldige waarden in.');
+                return;
+            }
+
+            const area = length * width;
+            const resultDiv = document.getElementById('areaResult');
+            resultDiv.textContent = `Oppervlakte: ${area.toFixed(2)} m²`;
+            resultDiv.style.display = 'block';
+        }
+
+        function calculatePercent() {
+            const base = parseFloat(document.getElementById('percentBase').value);
+            const percent = parseFloat(document.getElementById('percentValue').value);
+            if (isNaN(base) || isNaN(percent)) {
+                alert('Vul geldige waarden in.');
+                return;
+            }
+
+            const value = (base * percent) / 100;
+            const resultDiv = document.getElementById('percentResult');
+            resultDiv.textContent = `${percent}% van ${base} = ${value.toFixed(2)}`;
+            resultDiv.style.display = 'block';
+        }
+
+        document.querySelectorAll('nav a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('mainNav').classList.remove('active');
+                }
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            changeLanguage('nl');
+        });
+    </script>
+</body>
+</html>
